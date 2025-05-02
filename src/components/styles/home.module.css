@@ -34,5 +34,5 @@
   background-color: #f1ba09;
   border-radius: 2rem;
   font-size: 1.2rem;
-  @apply h-[3rem] w-[12.5 rem] ml-[1rem] hover:scale-110;
+  @apply h-[3rem] w-[12.5rem] ml-[1rem] hover:scale-110;
 }
