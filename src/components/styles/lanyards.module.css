@@ -1,0 +1,21 @@
+.main_container {
+  @apply h-[55rem];
+}
+
+.square_grid_bg {
+  background-image: url("/assets/home_background.png");
+  @apply h-[40rem] flex;
+  @apply mt-[8rem] mx-[3rem];
+  position: relative;
+
+  .logo_text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40px);
+    font-size: 4.5rem;
+  }
+}
+
+.lanyards_img {
+  @apply h-[16rem] object-contain;
+}

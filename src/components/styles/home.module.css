@@ -1,0 +1,38 @@
+.main_container {
+  @apply h-[55rem] relative;
+}
+.square_grid_bg {
+  background-image: url("/assets/home_background.png");
+
+  @apply basis-full h-[40rem];
+  @apply mt-[4rem] ml-[3rem] mr-[6rem];
+}
+
+.left_center_div {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  @apply ml-[3rem];
+
+  img {
+    @apply h-[30rem] block;
+  }
+}
+
+.bottom_right_div {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  img {
+    @apply h-[55rem] block;
+  }
+}
+
+.button {
+  background-color: #f1ba09;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  @apply h-[3rem] w-[12.5 rem] ml-[1rem] hover:scale-110;
+}

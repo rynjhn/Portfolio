@@ -1,0 +1,25 @@
+.main_container {
+  @apply h-[55rem];
+}
+
+.square_grid_bg {
+  background-image: url("/assets/home_background.png");
+  @apply h-[40rem] flex;
+  @apply mt-[8rem] mx-[3rem];
+  position: relative;
+
+  .about_me {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60px);
+    font-size: 4.5rem;
+  }
+
+  .description{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    @apply text-[1.6rem];
+    @apply w-10/12 text-justify;
+  }
+}
