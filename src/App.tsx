@@ -1,5 +1,7 @@
-// Icons
+import { useRef } from "react";
 import { FaBars } from "react-icons/fa";
+
+// Components
 import { Home } from "./components/Home";
 import { Aboutme } from "./components/Aboutme";
 import { Logos } from "./components/Logos";
@@ -9,8 +11,16 @@ import { Mobiles } from "./components/Mobiles";
 import { Posters } from "./components/Posters";
 import { Lanyards } from "./components/Lanyard";
 import { Uniforms } from "./components/Uniforms";
+import { Skills } from "./components/Skills";
+import { Contacts } from "./components/Contacts";
 
 function App() {
+  const homeRef = useRef<HTMLDivElement | null>(null);
+  const aboutMeRef = useRef<HTMLDivElement | null>(null);
+  const myProjectRef = useRef<HTMLDivElement | null>(null);
+  const skillsRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -31,33 +41,92 @@ function App() {
             <ul className="menu menu-horizontal mr-8">
               {/* Navbar menu content here */}
               <li className="mr-1">
-                <span>HOME</span>
+                <span
+                  onClick={() => {
+                    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  HOME
+                </span>
               </li>
               <li className="mr-1">
-                <span>ABOUT ME</span>
+                <span
+                  onClick={() => {
+                    aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  ABOUT ME
+                </span>
               </li>
               <li className="mr-1">
-                <span>MY PROJECT</span>
+                <span
+                  onClick={() => {
+                    myProjectRef.current?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  MY PROJECT
+                </span>
               </li>
               <li className="mr-1">
-                <span>SKILLS</span>
+                <span
+                  onClick={() => {
+                    skillsRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  SKILLS
+                </span>
               </li>
               <li className="mr-1">
-                <span>CONTACT</span>
+                <span
+                  onClick={() => {
+                    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  CONTACT
+                </span>
               </li>
             </ul>
           </div>
         </div>
         {/* Page content here */}
-        <Home />
-        <Aboutme />
-        <Logos />
-        <Newspapers />
-        <Webs />
-        <Mobiles />
-        <Posters />
-        <Lanyards />
-        <Uniforms />
+        <div ref={homeRef}>
+          <Home />
+        </div>
+        <div ref={aboutMeRef}>
+          <Aboutme />
+        </div>
+        <div ref={myProjectRef}>
+          <Logos />
+        </div>
+        <div>
+          <Newspapers />
+        </div>
+        <div>
+          <Webs />
+        </div>
+        <div>
+          <Mobiles />
+        </div>
+        <div>
+          <Posters />
+        </div>
+        <div>
+          <Lanyards />
+        </div>
+        <div>
+          <Uniforms />
+        </div>
+        <div ref={skillsRef}>
+          <Skills />
+        </div>
+        <div ref={contactRef}>
+          <Contacts />
+        </div>
+        <div className="h-[6rem] bg-[#2D2D2D] flex items-center justify-center">
+          <img src="/assets/footer_logo.png" />
+        </div>
       </div>
       <div className="drawer-side">
         <label

@@ -4,7 +4,9 @@ export const Aboutme = () => {
   return (
     <div className={classes.main_container}>
       <div className={classes.square_grid_bg}>
-        <div className={classes.about_me}>About me</div>
+        <div className={classes.about_me}>
+          <img src="/assets/aboutme_text.png" />
+        </div>
         <div className={classes.description}>
           Hello! I'm Jhon Ryan, a third-year BSIT student with a passion for web
           design. My journey in technology has fueled my creativity and
